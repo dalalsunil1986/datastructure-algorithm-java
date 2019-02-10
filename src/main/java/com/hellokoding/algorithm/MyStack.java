@@ -12,7 +12,7 @@ public class MyStack {
     }
 
     public void push(int x) {
-        if (top == stack.length - 1) {
+        if (isFull()) {
             throw new StackOverflowError();
         }
 
@@ -36,12 +36,16 @@ public class MyStack {
         return stack[top];
     }
 
-    public int size() {
-        return top + 1;
-    }
-
     public boolean isEmpty() {
         return top == -1;
+    }
+
+    public boolean isFull() {
+        return top == stack.length - 1;
+    }
+
+    public int size() {
+        return top + 1;
     }
 
     public static void main(String[] args) {
