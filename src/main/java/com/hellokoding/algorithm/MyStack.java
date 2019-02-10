@@ -3,7 +3,7 @@ package com.hellokoding.algorithm;
 import java.util.NoSuchElementException;
 
 public class MyStack {
-    private final int[] stack;
+    private int[] stack;
     private int top;
 
     public MyStack(int capacity) {
