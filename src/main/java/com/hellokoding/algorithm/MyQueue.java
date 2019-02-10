@@ -1,6 +1,8 @@
 package com.hellokoding.algorithm;
 
-import java.util.*;
+import java.util.NoSuchElementException;
+import java.util.concurrent.BlockingDeque;
+import java.util.concurrent.LinkedBlockingDeque;
 
 public class MyQueue {
     private int[] queue;
@@ -62,5 +64,10 @@ public class MyQueue {
         System.out.println(myQueue.size()); // 1
         System.out.println(myQueue.isEmpty()); // false
         System.out.println(myQueue.isFull()); // false
+
+        BlockingDeque<Integer> queue = new LinkedBlockingDeque<>();
+        queue.offer(1); // equivalent to enqueue
+        queue.peek(); // equivalent to front
+        queue.poll(); // equivalent to dequeue
     }
 }

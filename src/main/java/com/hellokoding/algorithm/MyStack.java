@@ -55,13 +55,11 @@ public class MyStack {
         myStack.push(5);
 
         System.out.println(myStack.peek()); // 5
-
         System.out.println(myStack.pop()); // 5
-
         System.out.println(myStack.peek()); // 2
 
         System.out.println(myStack.size()); // 2
-
         System.out.println(myStack.isEmpty()); // false
+        System.out.println(myStack.isFull()); // false
     }
 }
