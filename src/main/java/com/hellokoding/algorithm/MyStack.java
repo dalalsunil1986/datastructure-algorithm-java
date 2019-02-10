@@ -13,7 +13,7 @@ public class MyStack {
 
     public void push(int x) {
         if (isFull()) {
-            throw new StackOverflowError();
+            throw new IllegalStateException();
         }
 
         top++;
