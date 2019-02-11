@@ -1,4 +1,4 @@
-package com.hellokoding.algorithm;
+package com.hellokoding.datastructure;
 
 import java.util.NoSuchElementException;
 import java.util.concurrent.BlockingDeque;
