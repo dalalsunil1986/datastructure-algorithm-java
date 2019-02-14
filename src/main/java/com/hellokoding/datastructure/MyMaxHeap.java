@@ -17,14 +17,12 @@ public class MyMaxHeap {
     }
 
     private void heapify(int k) {
-        int largest;
+        int largest = k;
         int leftIndex = 2*k;
         int rightIndex = 2*k + 1;
 
-        if (leftIndex <= heap.length && heap[leftIndex] > heap[k]){
+        if (leftIndex <= heap.length && heap[leftIndex] > heap[largest]){
             largest = leftIndex;
-        } else {
-            largest = k;
         }
 
         if (rightIndex <= heap.length && heap[rightIndex] > heap[largest]) {
@@ -32,7 +30,7 @@ public class MyMaxHeap {
         }
 
         if (largest != k) {
-            swap(heap[k], heap[largest]);
+            swap(k, largest);
             heapify(largest);
         }
     }
@@ -69,9 +67,9 @@ public class MyMaxHeap {
         MyMaxHeap maxHeap = new MyMaxHeap(5);
         maxHeap.push(3);
         maxHeap.push(1);
-        maxHeap.push(5);
+        maxHeap.push(7);
         maxHeap.push(2);
-        maxHeap.push(4);
+        maxHeap.push(9);
 
         maxHeap.print();
 
