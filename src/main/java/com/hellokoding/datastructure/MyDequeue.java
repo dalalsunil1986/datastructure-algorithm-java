@@ -10,7 +10,7 @@ public class MyDequeue {
     public MyDequeue(int capacity) {
         this.dequeue = new int[capacity];
         this.front = 0;
-        this.rear = -1;
+        this.rear = 0;
     }
 
     public void enqueueFirst(int x) {
@@ -31,7 +31,7 @@ public class MyDequeue {
             throw new IllegalStateException();
         }
 
-        dequeue[++rear] = x;
+        dequeue[rear++] = x;
     }
 
     public int dequeueFirst() {
@@ -47,8 +47,7 @@ public class MyDequeue {
             throw new NoSuchElementException();
         }
 
-        rear--;
-        return dequeue[rear];
+        return dequeue[rear--];
     }
 
     public int front() {
@@ -89,7 +88,7 @@ public class MyDequeue {
         System.out.println(myQueue.dequeueFirst()); // 3
         System.out.println(myQueue.front()); // 1
 
-        System.out.println(myQueue.size()); // 1
+        System.out.println(myQueue.size()); // 2
         System.out.println(myQueue.isEmpty()); // false
         System.out.println(myQueue.isFull()); // false
     }

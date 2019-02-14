@@ -1,8 +1,6 @@
 package com.hellokoding.datastructure;
 
 import java.util.NoSuchElementException;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
 
 public class MyQueue {
     private int[] queue;
@@ -12,7 +10,7 @@ public class MyQueue {
     public MyQueue(int capacity) {
         this.queue = new int[capacity];
         this.front = 0;
-        this.rear = -1;
+        this.rear = 0;
     }
 
     public void enqueue(int x) {
@@ -20,7 +18,7 @@ public class MyQueue {
             throw new IllegalStateException();
         }
 
-        queue[++rear] = x;
+        queue[rear++] = x;
     }
 
     public int dequeue() {
@@ -61,11 +59,8 @@ public class MyQueue {
         System.out.println(myQueue.dequeue()); // 1
         System.out.println(myQueue.front()); // 2
 
-        System.out.println(myQueue.size()); // 1
+        System.out.println(myQueue.size()); // 2
         System.out.println(myQueue.isEmpty()); // false
         System.out.println(myQueue.isFull()); // false
-
-        BlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<>(3);
-        blockingQueue.offer(1);
     }
 }

@@ -16,8 +16,7 @@ public class MyStack {
             throw new IllegalStateException();
         }
 
-        top++;
-        stack[top] = x;
+        stack[++top] = x;
     }
 
     public int pop() {
