@@ -64,17 +64,17 @@ public class MyMinHeap {
     }
 
     public static void main(String[] args) {
-        MyMinHeap maxHeap = new MyMinHeap(5);
-        maxHeap.push(3);
-        maxHeap.push(1);
-        maxHeap.push(7);
-        maxHeap.push(2);
-        maxHeap.push(9);
+        MyMinHeap minHeap = new MyMinHeap(5);
+        minHeap.push(3);
+        minHeap.push(1);
+        minHeap.push(7);
+        minHeap.push(2);
+        minHeap.push(9);
 
-        maxHeap.print();
+        minHeap.print();
 
-        System.out.println(maxHeap.peek());
-        System.out.println(maxHeap.pop());
-        System.out.println(maxHeap.peek());
+        System.out.println(minHeap.peek());
+        System.out.println(minHeap.pop());
+        System.out.println(minHeap.peek());
     }
 }
