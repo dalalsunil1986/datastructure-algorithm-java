@@ -27,11 +27,12 @@ public class BreathFirstSearchOnGraph {
     }
 
     public static void main(String[] args) {
-        UndirectedGraphByAdjacencyList graph = new UndirectedGraphByAdjacencyList(4);
+        UndirectedGraphByAdjacencyList graph = new UndirectedGraphByAdjacencyList(5);
         graph.addEdge(0, 1);
         graph.addEdge(1, 2);
         graph.addEdge(2, 0);
         graph.addEdge(1, 3);
+        graph.addEdge(2, 4);
 
         new BreathFirstSearchOnGraph().breathFirstSearch(graph, 0);
     }
