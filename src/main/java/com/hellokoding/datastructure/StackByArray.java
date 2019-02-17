@@ -2,11 +2,11 @@ package com.hellokoding.datastructure;
 
 import java.util.NoSuchElementException;
 
-public class MyStack {
+public class StackByArray {
     private int[] stack;
     private int top;
 
-    public MyStack(int capacity) {
+    public StackByArray(int capacity) {
         stack = new int[capacity];
         top = -1;
     }
@@ -48,7 +48,7 @@ public class MyStack {
     }
 
     public static void main(String[] args) {
-        MyStack myStack = new MyStack(3);
+        StackByArray myStack = new StackByArray(3);
         myStack.push(4);
         myStack.push(2);
         myStack.push(5);

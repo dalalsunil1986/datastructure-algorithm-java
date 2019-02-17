@@ -2,12 +2,12 @@ package com.hellokoding.datastructure;
 
 import java.util.NoSuchElementException;
 
-public class MyDequeue {
+public class DequeueByArray {
     private int[] dequeue;
     private int front;
     private int rear;
 
-    public MyDequeue(int capacity) {
+    public DequeueByArray(int capacity) {
         this.dequeue = new int[capacity];
         this.front = 0;
         this.rear = 0;
@@ -79,7 +79,7 @@ public class MyDequeue {
     }
 
     public static void main(String[] args) {
-        MyDequeue myQueue = new MyDequeue(3);
+        DequeueByArray myQueue = new DequeueByArray(3);
         myQueue.enqueueFirst(1);
         myQueue.enqueueLast(2);
         myQueue.enqueueFirst(3);

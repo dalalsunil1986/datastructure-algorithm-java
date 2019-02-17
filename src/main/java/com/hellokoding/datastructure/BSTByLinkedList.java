@@ -1,7 +1,7 @@
 package com.hellokoding.datastructure;
 
 public class MyBinarySearchTree {
-    private Node root;
+    Node root;
 
     private Node insert(Node node, int data) {
         if (node == null) {

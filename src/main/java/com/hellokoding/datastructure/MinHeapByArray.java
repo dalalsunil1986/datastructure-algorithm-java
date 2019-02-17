@@ -1,10 +1,10 @@
 package com.hellokoding.datastructure;
 
-public class MyMinHeap {
+public class MinHeapByArray {
     private int[] heap;
     private int size;
 
-    public MyMinHeap(int capacity) {
+    public MinHeapByArray(int capacity) {
         this.heap = new int[capacity+1];
         this.heap[0] = Integer.MIN_VALUE;
         this.size = 0;
@@ -64,7 +64,7 @@ public class MyMinHeap {
     }
 
     public static void main(String[] args) {
-        MyMinHeap minHeap = new MyMinHeap(5);
+        MinHeapByArray minHeap = new MinHeapByArray(5);
         minHeap.push(3);
         minHeap.push(1);
         minHeap.push(7);

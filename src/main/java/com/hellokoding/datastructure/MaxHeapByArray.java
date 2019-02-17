@@ -1,10 +1,10 @@
 package com.hellokoding.datastructure;
 
-public class MyMaxHeap {
+public class MaxHeapByArray {
     private int[] heap;
     private int size;
 
-    public MyMaxHeap(int capacity) {
+    public MaxHeapByArray(int capacity) {
         this.heap = new int[capacity+1];
         this.heap[0] = Integer.MAX_VALUE;
         this.size = 0;
@@ -64,7 +64,7 @@ public class MyMaxHeap {
     }
 
     public static void main(String[] args) {
-        MyMaxHeap maxHeap = new MyMaxHeap(5);
+        MaxHeapByArray maxHeap = new MaxHeapByArray(5);
         maxHeap.push(3);
         maxHeap.push(1);
         maxHeap.push(7);
