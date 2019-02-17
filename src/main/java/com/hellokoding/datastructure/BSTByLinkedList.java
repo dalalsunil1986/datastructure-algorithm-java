@@ -1,7 +1,7 @@
 package com.hellokoding.datastructure;
 
 public class BSTByLinkedList {
-    Node root;
+    public Node root;
 
     private Node insert(Node node, int data) {
         if (node == null) {
@@ -41,12 +41,3 @@ public class BSTByLinkedList {
     }
 }
 
-class Node {
-    int data;
-    Node left;
-    Node right;
-
-    public Node(int data) {
-        this.data = data;
-    }
-}
