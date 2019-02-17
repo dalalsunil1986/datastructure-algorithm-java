@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UndirectedGraphByAdjacencyList {
-    int V;
-    List<Integer>[] adjacencyList;
+    private int V;
+    private List<Integer>[] adjacencyList;
 
     public UndirectedGraphByAdjacencyList(int V) {
         this.V = V;
@@ -16,15 +16,23 @@ public class UndirectedGraphByAdjacencyList {
         }
     }
 
-    public void addEdge(int source, int dest) {
-        adjacencyList[source].add(dest);
-        adjacencyList[dest].add(source);
+    public int getV() {
+        return V;
     }
 
-    public void print() {
+    public List<Integer> getAdjacencyList(int vertex) {
+        return adjacencyList[vertex];
+    }
+
+    private void print() {
         for (int i = 0; i < V; i++) {
             System.out.printf("Adjacency list of vertex %d is %s %s", i, adjacencyList[i], System.lineSeparator());
         }
+    }
+
+    public void addEdge(int source, int dest) {
+        adjacencyList[source].add(dest);
+        adjacencyList[dest].add(source);
     }
 
     public static void main(String[] args) {
