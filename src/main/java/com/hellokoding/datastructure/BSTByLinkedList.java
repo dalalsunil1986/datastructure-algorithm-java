@@ -1,6 +1,6 @@
 package com.hellokoding.datastructure;
 
-public class MyBinarySearchTree {
+public class BSTByLinkedList {
     Node root;
 
     private Node insert(Node node, int data) {
@@ -30,7 +30,7 @@ public class MyBinarySearchTree {
     }
 
     public static void main(String[] args) {
-        MyBinarySearchTree binarySearchTree = new MyBinarySearchTree();
+        BSTByLinkedList binarySearchTree = new BSTByLinkedList();
         binarySearchTree.insert(7);
         binarySearchTree.insert(1);
         binarySearchTree.insert(9);
