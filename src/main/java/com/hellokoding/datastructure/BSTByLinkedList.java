@@ -8,9 +8,9 @@ public class BSTByLinkedList {
             return new Node(data);
         }
 
-        if (data <= node.data) {
+        if (data < node.data) {
             node.left = insert(node.left, data);
-        } else {
+        } else if (data > node.data)  {
             node.right = insert(node.right, data);
         }
 
@@ -25,19 +25,19 @@ public class BSTByLinkedList {
         if (node == null) return;
 
         inTraversal(node.left);
-        System.out.println(node.data);
+        System.out.println(node);
         inTraversal(node.right);
     }
 
     public static void main(String[] args) {
-        BSTByLinkedList binarySearchTree = new BSTByLinkedList();
-        binarySearchTree.insert(7);
-        binarySearchTree.insert(1);
-        binarySearchTree.insert(9);
-        binarySearchTree.insert(2);
-        binarySearchTree.insert(3);
+        BSTByLinkedList tree = new BSTByLinkedList();
+        tree.insert(7);
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(1);
+        tree.insert(9);
 
-        binarySearchTree.inTraversal(binarySearchTree.root);
+        tree.inTraversal(tree.root);
     }
 
     public static class Node {
@@ -47,6 +47,11 @@ public class BSTByLinkedList {
 
         public Node(int data) {
             this.data = data;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("data: %d, left: %d, right: %d", data, (left !=null ? left.data : null), (right != null? right.data : null));
         }
     }
 }
