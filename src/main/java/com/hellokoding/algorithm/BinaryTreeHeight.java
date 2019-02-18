@@ -1,13 +1,12 @@
 package com.hellokoding.algorithm;
 
 import com.hellokoding.datastructure.BSTByLinkedList;
-import com.hellokoding.datastructure.Node;
 
 public class BinaryTreeHeight extends BSTByLinkedList {
     public int height(Node node) {
-        if (node == null) return 0;
+        if (node == null) return -1;
 
-        return Math.max(height(node.left), height(node.right)) + 1;
+        return Math.max(1 + height(node.left), 1 + height(node.right));
     }
 
     public static void main(String[] args) {
@@ -18,6 +17,7 @@ public class BinaryTreeHeight extends BSTByLinkedList {
         tree.insert(2);
         tree.insert(3);
 
+        tree.inTraversal(tree.root);
         System.out.println(tree.height(tree.root));
     }
 }

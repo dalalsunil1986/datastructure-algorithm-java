@@ -39,5 +39,15 @@ public class BSTByLinkedList {
 
         binarySearchTree.inTraversal(binarySearchTree.root);
     }
+
+    public static class Node {
+        public int data;
+        public Node left;
+        public Node right;
+
+        public Node(int data) {
+            this.data = data;
+        }
+    }
 }
 
